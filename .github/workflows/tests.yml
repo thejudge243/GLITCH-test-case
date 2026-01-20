@@ -20,6 +20,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip 
           python -m pip install -e .
+          touch ./__init__.py
       - name: Run tests with unittest
         run: |
           python -m unittest discover tests
