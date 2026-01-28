@@ -22,4 +22,4 @@ jobs:
           python -m pip install -e .
       - name: Run tests with unittests
         run: |
-          python -m unittest discover glitch/tests
+          python -m unittest discover glitch/tests/*/**.py
