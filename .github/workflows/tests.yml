@@ -15,10 +15,6 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7.4'
-          
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.10'
       - name: Install dependencies
         run: |
           python -m venv env
@@ -28,5 +24,4 @@ jobs:
       - name: Run tests with unittest
         run: |
           source env/bin/activate
-          cd glitch
-          python -m unittest discover test
+          python -m unittest discover tests
